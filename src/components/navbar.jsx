@@ -7,16 +7,16 @@ const Navbar = () => {
   const [theme, setTheme] = useState(defaultTheme);
   const element = document.documentElement;
 
-  const icons = [
-    {
-      icon: "moon",
-      text: "light"
-    },
-    {
-      icon: "sunny",
-      text: "dark"
-    }
-  ];
+  // const icons = [
+  //   {
+  //     icon: "moon",
+  //     text: "light"
+  //   },
+  //   {
+  //     icon: "sunny",
+  //     text: "dark"
+  //   }
+  // ];
 
   useEffect(() => {
     switch (theme) {
@@ -63,17 +63,19 @@ const Navbar = () => {
             </svg>
           </a>
 
-          {icons?.map((icon) => (
-            <div className="rounded-lg" key={icon.text}>
-              <button
-                onClick={() => setTheme(icon.text)}
-                className={`w-8 h-8 leading-9 text-xl rounded-full m-1 text-ash ${
-                  theme === icon.text && `text-deeppurple`
-                }`}>
-                <ion-icon name={icon.icon}></ion-icon>
-              </button>
-            </div>
-          ))}
+          {theme === "light" ? (
+            <button
+              onClick={() => setTheme("dark")}
+              className={`w-8 h-8 leading-9 text-xl rounded-full m-1 text-ash text-deeppurple`}>
+              <ion-icon name="moon"></ion-icon>
+            </button>
+          ) : (
+            <button
+              onClick={() => setTheme("light")}
+              className={`w-8 h-8 leading-9 text-xl rounded-full m-1 text-ash text-deeppurple`}>
+              <ion-icon name="sunny"></ion-icon>
+            </button>
+          )}
         </div>
       </div>
     </nav>
