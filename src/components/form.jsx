@@ -87,7 +87,7 @@ const Form = () => {
           <form
             className="block md:flex items-center justify-start gap-2"
             id="form">
-            <div className="bg-ash h-11 rounded-full flex items-center p-3 mt-4 md:mt-0 dark:shadow-xxl boxssd shadow-inner">
+            <div className="bg-ash h-11 rounded-full flex items-center p-3 mt-4 md:mt-0 shadow-xl opacity-100 boxssd shadow-inner ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
